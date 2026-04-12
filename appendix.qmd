@@ -1,0 +1,115 @@
+---
+title: "Appendix"
+subtitle: "MY456 | WT 2026 | Summative Assigment"
+number-sections: true
+format:
+  pdf:
+    toc: false
+    include-in-header:
+      text: |
+        \setkomafont{disposition}{\normalfont\bfseries}
+        \setkomafont{section}{\normalfont\Large\bfseries}
+        \setkomafont{subsection}{\normalfont\normalsize}
+---   
+
+# Question 1
+
+## Original Question
+
+1. Most responsible people try to reduce their impact on the local and global environment. Do you try to do your part?
+- Yes
+- No
+- Not sure
+
+
+## Revised Question
+
+1. In the past month, have you taken any steps to reduce your personal impact on the environment?
+- Yes
+- No
+- Not sure
+
+
+# Question 2
+
+## Original Question
+
+2. How often do you recycle and reduce your household energy use in order to help fight climate change?
+- Always
+- Often
+- Sometimes
+- Rarely
+- Never
+
+
+## Revised Question
+
+2a. In a typical week, how often do you recycle items such as paper, glass, or plastic?
+
+- Every day or almost every day
+- Several times a week
+- Once a week
+- Less than once a week
+- Never / recycling is not available where I live
+
+2b. In the past 12 months, have you made any changes to reduce your household energy use (e.g. adjusting heating, switching to energy-efficient appliances, insulating your home)?
+
+- Yes, I have actively made changes
+- I have thought about it but not yet made changes
+- No, I have not made changes
+- Not applicable (e.g. renting with no control over these decisions)
+
+2c. What are your main reasons for recycling or reducing energy use? Select all that apply.
+
+- Concern about climate change
+- Concern about local pollution or waste
+- To save money
+- It is a habit / the norm in my household
+- Legal requirement or local rules
+- Other: ______
+- I do not currently recycle or reduce energy use
+
+
+# Question 3
+
+## Original Question
+
+3. Do you support stronger government policies such as higher taxes on flights and petrol to protect the environment?
+- Strongly agree
+- Agree
+- Disagree
+- Strongly disagree
+
+
+## Revised Question
+
+3a. To what extent do you support or oppose the government using taxes or charges to discourage activities that contribute to environmental damage?
+
+- Strongly support
+- Tend to support
+- Neither support nor oppose
+- Tend to oppose
+- Strongly oppose
+- Don't know / No opinion
+
++-------------------------+-------------------+------------------+----------+-----------------+------------------+-------------+
+| Policy                  | Strongly support  | Tend to support  | Neither  | Tend to oppose  | Strongly oppose  | Don't know  |
++=========================+===================+==================+==========+=================+==================+=============+
+| Increasing tax on       |                   |                  |          |                 |                  |             |
+| domestic flights        |         o         |        o         |    o     |        o        |          o       |      o      |
+|                         |                   |                  |          |                 |                  |             | 
++=========================+===================+==================+==========+=================+==================+=============+
+| Increasing tax on       |                   |                  |          |                 |                  |             |
+| petrol and diesel       |         o         |        o         |    o     |        o        |         o        |      o      |
+|                         |                   |                  |          |                 |                  |             |
++=========================+===================+==================+==========+=================+==================+=============+
+| Requiring airlines to   |                   |                  |          |                 |                  |             |
+| offset carbon           |         o         |        o         |    o     |        o        |         o        |      o      |
+| emissions               |                   |                  |          |                 |                  |             |
++=========================+===================+==================+==========+=================+==================+=============+
+| Government subsidies    |                   |                  |          |                 |                  |             |
+| for electric vehicles   |         o         |        o         |    o     |        o        |         o        |      o      |
+|                         |                   |                  |          |                 |                  |             |
++-------------------------+-------------------+------------------+----------+-----------------+------------------+-------------+
+
+: 3b. For each of the following policies, please indicate whether you would support or oppose it.

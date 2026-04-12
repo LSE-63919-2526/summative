@@ -1,0 +1,205 @@
+---
+title: "Survey Analysis: Evaluating Environmental Behaviour Questions with Silicon Sampling (Cogbot)"
+subtitle: "MY456 | WT 2026 | Summative Assigment"
+number-sections: true
+format:
+  pdf:
+    toc: false
+    include-in-header:
+      text: |
+        \setkomafont{disposition}{\normalfont\bfseries}
+        \setkomafont{section}{\normalfont\Large\bfseries}
+        \setkomafont{subsection}{\normalfont\normalsize}
+---   
+
+# FIX ALL THE CITATIONS YOU DOOFUS
+
+# Part 1
+## Section A
+### Question 1
+
+The first question has several methodological problems that need to be addressed. Most notably, the phrasing "most responsible people try to reduce their impact" constitutes a leading question; the question frames failing to reduce environemental impact as an irresponsibe and undesirable behavior. This also creates strong social desirability bias. Respondents who might otherwise report low levels of effort to improve their environmental impact may over-report to align themselves with the socially favored category. The wording "responsible" is also compounded by the phrase "do your part," which could be confusing. The ques
+tion is not clear whether this refers to recycling, reducing consumption, thrifting, utilizing public transportation, volunteering, etc. This violates the principle of uniform comprehension **(Sudman & Bradburn, 1982),** whereby all respondents should interpret a survey item in the same way.
+
+The response scale also presents problems. A binary "Yes/No" forces respondents into categories that fail to reflect the ambivalent and context-dependent nature of environmental behaviour. In this scenario, having "Not sure" as a response option is likely not a true state for most individuals; individuals generally know whether or not they make deliberate environmental efforts. Finally, specifying both "local" and "global" environments introduces a semi-double-barrelled structure, since actions affecting one environment will typically affect the other, and it is often hard to distinguish between the two.
+
+
+### Question 2
+
+This question is double-barrelled in a way that introduces systematic measurement error: recycling and reducing household energy use are behaviourally distinct activities, and many respondents will engage in one but not the other, causing confusing regarding how to answer the question. Combining them into a single question makes it impossible to distinguish which behavior respondents are referencing when they answer.
+
+Further problems arise from the motivational framing. Specifying that individuals perform these behaviors are undertaken to "fight climate change" assumes both that respondents share this desire and introduces social desirability bias - pariticipants who respond out of habit, incentive, or obligation are automatically excluded from the question's framing. Additionally, the question fails to account for respondents who have no meaningful control over the relevant behaviors - students in university accommodation, residents of care facilities, or tenants in properties where energy decisions rest with landlords - for whom the question is simply inapplicable. The phrase may also not be universally understood; while "climate change" is broadly recognised, its precise meaning and relationship to everyday household behavior is not always clear. This needs to be defined for the question (i.e. warming of the planet, biodiversity loss, deforestation, rising sea levels) or presented in a more obvious context.
+
+Finally, the response scale suffers from insufficient differention and definition between its options. "often" and "sometimes" are too similar to be reliably distinguished by respondents, producing measurement error at the range of the scale where most responses will likely cluster. Even options like "always" can be unclear - respondents may be confused if this applies to every time they use an energy source or instead refers to frequency of energy-conscious consumption within a specific time period.
+
+
+### Question 3
+
+This item conflates a general attitudinal question with two specific policy instruments, creating a high cognitive load and forcing respondents to simultaneously evaluate support for environmental governance and two concrete fiscal measures. Respondents who support government action in principle but oppose fuel taxes specifically — a pattern well-documented in the literature on the attitude–behaviour gap — cannot express this distinction within the current format. Individuals who have weaker or less developed opinions on these issues may satisfice because of the complicated structure.
+
+The phrase "to protect the environment" functions as positively loaded language, likely pulling responses in a pro-policy direction among respondents who would otherwise be more ambivalent. Furthermore, the response scale employs agreement categories that are mismatched with a question phrased as "do you support," and omits both a midpoint and a "don't know" option. A "yes/no/unsure" structure would be a better response scale for this question. The existing wording forces directional responses from respondents who may have genuine uncertainty or no strong view on a complex policy question, artificially inflating the appearance of polarization.
+
+
+## Section B
+
+Cogitive testing was conducted using silicon respondents rather than interviewing human participants. Each of the three survey items was submitted to Cogbot, which generated 20 simulated responses per question. (Initally, I began with a sample of 30 respondents, but found that this was too much information and re-sized my sample to 20.) Respondent characteristics were not specified beyond the target frame (UK residents, 18+), meaning the synthetic responses drew from the model's generalized representation and learned behavior, rather than constricting the training data further.
+
+Because this was a silicon sampling process, no probing strategy was employed in the conventional sense. Rather than conducting think-aloud interviews and following up with respondents about their thoughts, responses were generated in a single pass-per-question and then reviewed for recurring themes — particularly around comprehension difficulties, ambiguous terminology, social desirability concerns, and response scale adequacy. Patterns were identified inductively across the 20 responses per item.
+
+It should be acknowledged that this process differs from traditional cognitive testing in several respects. No human participants were involved, no follow-up questions were asked, and the demographic composition of the synthetic sample was not controlled. As such, the findings below should be understood as a preliminary indicator of potential question issues rather than a fully validated cognitive pre-test. These limitations are consistent with the broader constraints of silicon sampling in industry today.
+
+## Section C
+
+* Please see the appendix for the revised survey questions.
+
+### Question 1
+
+**Cogbot Testing:** CogBot testing largely corroborated the concerns raised in Section A. Simulated respondents frequently reported no difficulty comprehending the question at face value, including that the question did not assume the participant had any specific experience or prompt any recall difiiculties. However, even though some of the silicon respondents stated the question was not leaning, loaded, confusing, or double-barreled, a recurring theme was discomfort with the phrase "responsible people," which over half identified as subtly normative and potentially exclusionary for those who might not identify with that label. Several respondents also flagged the inadequacy of the binary response options, noting that their behaviour was more nuanced than a simple yes or no could capture. The phrase "reduce their impact" was confusing for many, specifically the magnitude of the phrase "impact" and what actions or steps that might include. Finally, many of the silicon respondents voiced concerns that they might not be "capable of making an effort to reduce [their] environmental impact," or that the actions they did perform would not be considered enough by most societal standards. “I'm not sure if I'm doing enough, but I feel like I'm trying,” or some variation of this phrase, was expressed by 13 of the 20 respondents.
+
+**Why the revised question is better:** "In the past month, have you taken any steps to reduce your personal impact on the environment?" — addresses these issues by removing the moral framing("responsible people") entirely, decoupling reported behaviour from attitudinal self-categorisation. The concrete, bounded recall period ("past month") supports retrieval accuracy by restricting the period t specific and accessible time frame, which supports retrieval accuracy rather than relying on vague self-assessment.
+
+
+### Question 2
+
+**Cogbot Testing:** CogBot responses reflected the structural weaknesses identified, with most failing to find positive aspects of the question to comment on. 13 of the 20 respondents correctly found the double-barrelled structure, with several reporting confusing about how to report the frequency and timing of reducing and recycling. Many also expressed uncertainty about the scope of the phrases "reduce household energy use" and "fight climate change" and whether the question was asking about intentions or actual behaviour. Similarly to Question 1, several respondents were unsure if their "current habits [were] enough to make a significant impact on the environment," and whether this would constitute enough to "help" the environment. Last, over half of the responses mentioned difficulties choosing between the available middle options and requesting a different response scale or options.
+
+**Why the revised question is better:** The redesigned questions separate the two behaviors into distinct items, eliminating the double-barrelled problem. Recycling frequency is measured using behaviorally-anchored response categories rather than vague quantifiers, while energy-reduction behavior is asked about as a yes/no change over the past twelve months. Motivation is asked independently and without pre-supposing assumptions, as a separate optional item. Frequency anchors are behaviorally-specified rather than relying on vague quantifiers like "often." Notably, the energy question includes a "not applicable" option, acknowledging that many individuals lack control over these decisions — an important omission in the original question.
+
+
+### Question 3
+
+**Cogbot Testing:** Despite the conflated question wording, most of the Cogbot respondents reported no issues recalling relevent information or responding to the question. However, testing confirmed that the phrase "stronger government policies" was widely experienced as vague, with many wondering if specific policies were included in the question's scope. Several answers identified "protect the environment” as leading and too broad to be experienced uniformly. Many respondents reported feeling uncertain whether they had sufficient knowledge to answer reliably and that they had to consider a variety of complex topics to answer the question. Finally, the absence of a neutral response option was noted repeatedly.
+
+
+**Why the revised question is better:** The general principle and the specific policy instruments are separated, allowing researchers to detect the gap between abstract support for environmental policy and support for specific fiscal measures. The framing is neutral - "discourage activities that contribute to environmental damage" is more balanced than "protect the environment" but less charged than "higher taxes." A midpoint and "Don't know" option are included to account for genuine neutrality and individuals who might not have well-developed opinions and avoid forcing directional responses. The grid format allows multiple policies to be rated individually, preventing the conflation of distinct policy ideas into one combined answer.
+
+
+# Part 2
+## Section A
+
+* Please see the attached CSV file for evidence of testing with the 2,204 respondents. For this section, I chose to to test my revised version of Question 1.
+
+
+## Section B
+
+Silicon sampling is a methodology in which large language models are used to simulate survey respondents, generating synthetic data that can stand in for - or supplement - responses from human participants. Typically, a large language model (LLM) is prompted with a demographic profile (which may be specific or loose depending on the research objective) and asked to answer a survey item as if it were a member of that population. By varying these profiles across model runs, researchers can assemble a synthetic sample that mimics the distribution of responses one might expect from a real-world survey.
+
+This technique has a number of practical applications. In survey pre-testing, silicon sampling can be used to identify potential comprehension problems, leading wording, social desirability effects, and poorly designed response scales before a survey enters the field - in much the same way as Cogbot was used in Part 1. Silicon sampling is also used for methodological experimentation enabling researchers to experiment with how question wording, placement, response scale design, and mode effects might affect the distribution of respondents' answers, without incurring the time and cost of repeated fieldwork. It has additional applications in training and teaching, where synthetic datasets with known complex design features - such as weighting structures, stratification, or cluster sampling - can be generated for instructional purposes.
+
+Despite these advantages and applications, silicon sampling carries important limitations. LLMs are trained on large bodies of text that reflect the perspectives, norms, and knowledge available at the time and place of the training data; they do not have access to the full gamut of human expeience and may systematically misrepresent populations that are underrepresented in that data. As a result, silicon samples may inherit and amplify the biases present in the underlying model, with no mechanism for researchers to detect or correct this without external validation. This approach is therefore better suited to substantive methodological work - testing survey items, generating training data, exploring question design - rather than to the collection of empirical data about real-world attitudes and behaviors. Its validity ultimately depends on the degree to which the model can credibly simulate the target population, an assumption that should not be made lightly.
+
+
+## Section C
+
+The question asked of 2,204 synthetic UK adult respondents was: "In the past month, have you taken  any steps to reduce your personal impact on the environment?" Responses were Yes, No, or Not sure.
+
+The analysis used the full ESS-style complex survey design, incorporating the anweight variable (which combines design, calibration, and analysis weights), the stratum identifier for stratification, and the psu identifier for clustering. All estimates reported below are weighted population proportions derived from this full design.
+
++------------+----------------+-----------+-------------------+
+| Response   | Proportion     | SE        | 95% CI            | 
++============+================+===========+===================+
+| Yes        | 25.1%          | 0.0122    | [22.7%, 27.5%]    |
+|            |                |           |                   |
++============+================+===========+===================+
+| No         | 74.8%          | 0.0122    | [72.4%, 77.1%]    |
+|            |                |           |                   |
++============+================+===========+==========+========+
+| Not sure   | 0.1%           | 0.0007    | [0.0%, 0.3%]      |
+|            |                |           |                   |
++------------+----------------+-----------+-------------------+ 
+
+: Weighted estimates (full complex design):
+
+A substantial majority of UK adults — approximately three in four (74.8%, 95% CI [72.4%, 77.1%]) - reported that they had not taken any steps to reduce their personal environmental impact in the past month. Around one in four (25.1%, 95% CI [22.7%, 27.5%]) said they had done so. The "Not sure" category was negligible at 0.1%, with a confidence interval that barely clears zero, suggesting this was not a meaningful source of ambiguity in respondents' self-assessments. 
+
+The width of the confidence interval for the Yes and No categories is approximately 4.8 percentage points, reflecting reasonable but not exceptional precision given the sample size of n = 2,204. This interval is wider than a naive SRS calculation would suggest, which is a direct consequence of the clustering structure in the design (discussed further in Part F).
+
+This differs significantly from the Cogbot testing of the original question, where most of the respondents reported they had tried to "do [their] part" to help the environment. This may indicate that revising the question by removing vague wording, biases, and leading language improved the accuracy of responses to the survey item. However, it should be noted that these figures come from a silicon sample — synthetic respondents generated by Cogbot to match the demographic profile of the UK adult population — rather than a live survey. As such, while the estimates are designed to be nationally representative in terms of demographic composition, they reflect simulated response behaviour and should be interpreted with this limitation in mind.
+
+## Section D
+
+* Please see the attached analysis document for all coding and visualizations.
+
+## Section E
+
+The tables below show the estimated proportion saying "Yes" to the environmental behavior question and the proportion of respondents who are UK citizens, under four progressively richer design specifications.
+
++--------------------------+------------+------------+------------+------------+------------+------------+
+| Design                   | Proportion | SE         | CI_Lower   | CI_Upper   | DEFF       | Neff       |
++==========================+============+============+============+============+============+============+
+| SRS                      | 0.2533     | 0.0093     | 0.2351     | 0.2715     | —          | —          |
+|                          |            |            |            |            |            |            |
++==========================+============+============+============+============+============+============+
+| Weight only              | 0.2511     | 0.0106     | 0.2303     | 0.2719     | 1.3237     | 1664       |              
+|                          |            |            |            |            |            |            |
++==========================+============+============+============+============+============+============+
+| Weight + Strata          | 0.2511     | 0.0106     | 0.2304     | 0.2718     | 1.3092     | 1683       |     
+|                          |            |            |            |            |            |            |
++==========================+============+============+============+============+============+============+
+| Weight + Strata + PSU    | 0.2511     | 0.0122     | 0.2273     | 0.2749     | 1.7333     | 1271       |       
+|                          |            |            |            |            |            |            |
++--------------------------+------------+------------+------------+------------+------------+------------+
+
+: env_steps — "Yes" category:
+
++--------------------------+------------+------------+------------+------------+------------+------------+
+| Design                   | Proportion | SE         | CI_Lower   | CI_Upper   | DEFF       | Neff       |
++==========================+============+============+============+============+============+============+
+| SRS                      | 0.9392     | 0.0051     | 0.9292     | 0.9492     | —          | —          |
+|                          |            |            |            |            |            |            |
++==========================+============+============+============+============+============+============+
+| Weight only              | 0.9267     | 0.0070     | 0.9129     | 0.9404     | 1.6042     | 1374       |              
+|                          |            |            |            |            |            |            |
++==========================+============+============+============+============+============+============+
+| Weight + Strata          | 0.9267     | 0.0069     | 0.9132     | 0.9401     | 1.5377     | 1433       |     
+|                          |            |            |            |            |            |            |
++==========================+============+============+============+============+============+============+
+| Weight + Strata + PSU    | 0.9267     | 0.0069     | 0.9131     | 0.9402     | 1.5543     | 1418       |       
+|                          |            |            |            |            |            |            |
++--------------------------+------------+------------+------------+------------+------------+------------+
+
+: citizen — "Yes" (UK citizen) category:
+
+
+**Point Estimates**
+
+For env_steps, the SRS proportion (0.2533) shifts slightly downward once weighting is applied (0.2511), and then remains stable across Designs 3 and 4. The small shift from Design 1 to Design 2 reflects the correction the weights apply for unequal selection probabilities and non-response. It is expected that there will be a shift in the point estimate, since no sample can perfectly capture the population. However, the fact that the shift is modest suggests the Cogbot sample was broadly representative for this attitudinal variable, and the weights are making only minor compositional adjustments.
+
+For citizen, the shift is more pronounced: the SRS proportion is 0.9392, which falls to 0.9267 once weights are applied — a difference of approximately 1.3 percentage points. This is consistent with the expectation that citizenship, as a demographic characteristic closely tied to how populations are sampled and weighted, is more sensitive to the correction applied by anweight. The raw sample slightly over-represented UK citizens relative to the weighted population estimate, so anweight respondes by shifting the point estimate down.
+
+**Standard Errors**
+
+The pattern of standard errors tells a clear and methdologically expected story across both variables. Under the SRS design, the standard errors are smallest — 0.0093 for env_steps and 0.0051 for citizen — because SRS assumes every observation is an independent draw from the population, which produces the most optimistic (but incorrect) precision estimates.
+
+When weights are added in Design 2, standard errors increase for both variables. This is because unequal weights inflate variance: respondents with large weights contribute disproportionately to the estimate, effectively reducing the number of independent pieces of information in the sample. This is a well-known property of design-weighted estimation **(Kish, 1965)**.
+
+Adding stratification in Design 3 produces a slight reduction in standard errors relative to Design 2 for both variables. This is to be expected; stratification removes between-stratum variance and noise from the estimate, recovering some of the precision lost to weighting. The effect is small here, which may reflect that the strata are not highly differentiated on these particular variables, or that the within-stratum variation is already large.
+
+Adding PSU clustering in Design 4 increases the standard errors substantially for env_steps (from 0.0106 to 0.0122), while the effect on citizen is negligible (0.0069 to 0.0069). This divergence is discussed further in Part F, but reflects a fundamental difference in how geographically concentrated the two variables are.
+
+## Section F
+
+**Differing Estimates Across Designs**
+
+The differences between the naive SRS design and the three complex designs arise from three distinct sources. First, adding weighting shifts the point estimates by correcting for varied representation in the sample - groups that are oversampled recieve lower weights and undersampled groups receive higher weights. Second, weighting and clustering are both procedures that add variance to the design and inflate standard errors, because neither independent sampling nor equal probability of selection can be assumed. Third, stratification can offset this inflation by ensuring the sample captures the populations subgroups proportionally, reducing variability.
+
+The fact that the point estimates stabilizes after Design 2 is expected; the design specification does not change the weights, only 
+how the variance is estimated. What changes between the designs is the standard error, not the point estimates.
+
+**Design Effects**
+
+The design effect (DEFF) measures how much less statistically efficient the complex design is relative to a simple random sample of the same size. A DEFF of 1 would mean that the new design is equally efficient to SRS; a DEFF higher than 1 means the sample provided less efficiency than employing an equivalent SRS.
+
+For env_steps (Yes), the DEFF under the full design is 1.73. The design effect here is moderate, meaning that the complex design is roughly 73% less efficient than the SRS Design 1. The DEFF under weight-only (1.32) is lower, with the jump to 1.73 in  the full design attributable to the addition of the PSU clustering component. This indicates that people in the same geographic cluster (PSU) tend to give similar answers to this survey question - a positive intra-cluster correlation (ICC) - so adding respondents from the same PSU to the sample provides less information than adding individuals from a different area.
+
+For citizen (Yes = UK citizen), the DEFF under the full design is 1.55, which is somewhat lower than for env_steps. While this may seem counterintuitive (citizenship is more geographically concentrated than attitude), the weight-only DEFF for citizen (1.60) is actually higher than for env_steps (1.32), indicating that the weighting component contributes more to the design effect for citizenship. Once PSU clusters are added, the DEFF for citizen increases only marginally (from 1.54 to 1.55), whereas for env_steps it increases substantially (from 1.31 to 1.73). This suggests that, in this sample, geographic clustering (within PSUs) matters more for the precision of environmental attitudes than for estimating citizenship. One possible explanation is that the Cogbot silicon sample has already istributed non-citizens across strata in a way that reduces within-PSU homogeneity for citizenship, even if the overall weighting correction is larger.
+
+**Effective Sample Sizes**
+
+The effective sample size (Neff = n / DEFF) translates the design effect into a measure of how many respondents the sample is effectively equivalent to in terms of statistical precision.
+
+For env_steps under the full design, Neff = 1,271. Despite the full sample having 2,204 silicon respondents, the complex design gives us the same precision as an SRS of 1,271, approximately half that number. Under the weight-only design, Neff = 1,664, meaning the clustering alone accounts for the loss of roughly 393 additional effective observations when moving from Design 2 to Design 4.
+
+For citizen under the full design, Neff = 1,418 - this is somewhat larger than for env_steps, consistent with the lower full-design DEFF. The effective loss relative to the nominal sample is approximately 786 observations, or around 36%.
+
+In both cases, the effective sample size is significantly below the nominal n = 2,204. this has direct implications for how confident researchers should be in these estimates: standard errors  should be calculated using the complex design rather than the SRS formula, or they will be systematically understated. Under SRS assumptions, the standard error for env_steps (Yes) is 0.0093; under the full complex design it is 0.0122 — roughly 31% larger.  Reporting SRS-based confidence intervals would therefore give a misleadingly narrow picture of the uncertainty in the estimate.
