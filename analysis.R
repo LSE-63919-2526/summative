@@ -1,18 +1,10 @@
----
-title: "Codebook and Associated Graphics"
-subtitle: "MY456 | WT 2026 | Summative Assigment"
-number-sections: true
-format:
-  pdf:
-    toc: false
-    include-in-header:
-      text: |
-        \setkomafont{disposition}{\normalfont\bfseries}
-        \setkomafont{section}{\normalfont\Large\bfseries}
-        \setkomafont{subsection}{\normalfont\normalsize}
----    
+#####################################################################################################
+#
+# Codebook and Associated Graphics
+# MY456 | WT 2026 | Summative Assigment
+#
+#####################################################################################################
 
-```{r setup, include = FALSE}
 # Global options for qmd
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, linewidth = 60, echo = T)
 
@@ -20,24 +12,21 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, linewidth = 60, echo = T
 library(survey)
 library(tidyverse)
 
-```
-
+#####################################################################################################
 # Part C - Preliminary Analysis
+#####################################################################################################
 
 ## Loading Data
-
-```{r}
 df <- read.csv("data/silicon_sample_20260406_173053.csv", stringsAsFactors = FALSE)
 
 # Quick check
 nrow(df)       # Should be 2,204
 names(df)      # Check variable names are as expected
 
-```
+#####################################################################################################
 
 ## Clean and Recode Cogbot Responses
 
-```{r}
 # Cogbot encodes responses as letters. Inspect unique values first:
 table(df$response, useNA = "always")
 
@@ -57,11 +46,9 @@ df <- df %>%
 # Verify recode
 table(df$env_steps, useNA = "always")
 
-```
+#####################################################################################################
 
 ## Complex Survey Design
-
-```{r}
 # stratum and psu: Sampling structure
 # anweight: Combines design, calibration, and analysis weights
 
@@ -76,11 +63,10 @@ design <- svydesign(
 # Summary of the design object
 summary(design)
 
-```
+#####################################################################################################
 
 ## Weighted Frequency Table
 
-```{r}
 # Estimated population proportions with standard errors
 props <- svymean(~env_steps, design, na.rm = TRUE)
 print(props)
@@ -99,20 +85,18 @@ props_df <- as.data.frame(confint(props)) %>%
 
 print(props_df)
 
-```
+#####################################################################################################
 
 ## Weighted Counts
-
-```{r}
 # Estimated number of UK adults in each category
+
 counts <- svytotal(~env_steps, design, na.rm = TRUE)
 print(counts)
 
-```
+#####################################################################################################
 
 ## Bar Chart of Weighted Proportions
 
-```{r}
 ggplot(props_df, aes(x = response, y = pct, fill = response)) +
   geom_col(width = 0.5, colour = "white") +
   geom_errorbar(
@@ -139,11 +123,10 @@ ggplot(props_df, aes(x = response, y = pct, fill = response)) +
 
 ggsave("environment_initial_design_plot.png", width = 7, height = 5, dpi = 300)
 
-```
+#####################################################################################################
 
 ## Breakdown by Sex
 
-```{r}
 # Weighted cross-tabulation: response by sex
 sex_tab <- svyby(~env_steps, ~sex, design, svymean, na.rm = TRUE)
 print(sex_tab)
@@ -178,11 +161,10 @@ ggplot(sex_df, aes(x = sex, y = pct, fill = response)) +
 
 ggsave("environment_by_sex.png", width = 7, height = 5, dpi = 300)
 
-```
+#####################################################################################################
 
 ## Breakdown by Age Group
 
-```{r}
 # Create age bands from continuous age variable
 df <- df %>%
   mutate(
@@ -205,7 +187,7 @@ design2 <- svydesign(
 age_tab <- svyby(~env_steps, ~age_group, design2, svymean, na.rm = TRUE)
 print(age_tab)
 
-```
+#####################################################################################################
 
 ## Significance Testing
 
@@ -218,9 +200,10 @@ print(sex_test)
 
 Text goes here about preliminary analysis
 
+#####################################################################################################
+
 # Helper Functions (following seminar 5 style)
 
-``` {r} 
 # Proportions: SE, 95% CI, and optionally DEFF / DEFT / Neff
 calc_prop_table <- function(design, formula, include_deff = TRUE) {
   prop  <- svymean(formula, design = design, na.rm = TRUE)
@@ -243,14 +226,14 @@ calc_prop_table <- function(design, formula, include_deff = TRUE) {
   }
   result
 }
-```
 
-
+#####################################################################################################
 # PART D - Testing Estimation Options
+#####################################################################################################
 
 ## Levels of Complex Survey Design
 
-``` {r}
+
 # Design 1: SRS  (no weight, no strata, no PSU)
 # Design 2: Weight only
 # Design 3: Weight + stratification
@@ -312,12 +295,10 @@ print(calc_prop_table(design_full, ~env_steps))
 cat("\n-- citizen --\n")
 print(calc_prop_table(design_full, ~citizen))
 
-```
-
+#####################################################################################################
 
 ## Clean Side-by-Side Comparison Tables
 
-``` {r} 
 # Helper: extract one named category row across the four designs
 make_comparison <- function(cat_label, d1, d2, d3, d4, formula) {
   extract <- function(d, deff) {
@@ -339,12 +320,11 @@ print(make_comparison("Yes", design_srs, design_wt, design_wt_str, design_full, 
  
 cat("\n===== COMPARISON TABLE: citizen — 'UK citizen' category =====\n")
 print(make_comparison("UK citizen", design_srs, design_wt, design_wt_str, design_full, ~citizen))
-```
- 
+
+##################################################################################################### 
 
 ## Weight Distribution Plot
 
-``` {r}
 ggplot(df, aes(x = anweight)) +
   geom_histogram(bins = 40, fill = "steelblue", colour = "white") +
   theme_minimal(base_size = 12) +
@@ -358,12 +338,10 @@ ggplot(df, aes(x = anweight)) +
  
 ggsave("weight_distribution.png", width = 7, height = 4, dpi = 300)
 
-```
- 
+#####################################################################################################
 
 ## Bar Charts: Full Design Estimates with 95% CIs
-
-``` {r}  
+ 
 # env_steps
 props_env <- calc_prop_table(design_full, ~env_steps) %>%
   rownames_to_column("category") %>%
@@ -385,9 +363,7 @@ ggplot(props_env, aes(x = category, y = Proportion * 100, fill = category)) +
   theme(legend.position = "none")
  
 ggsave("env_steps_full_design.png", width = 7, height = 5, dpi = 300)
-```
 
-``` {r}  
 # citizen
 props_cit <- calc_prop_table(design_full, ~citizen) %>%
   rownames_to_column("category") %>%
@@ -409,12 +385,10 @@ ggplot(props_cit, aes(x = category, y = Proportion * 100, fill = category)) +
   theme(legend.position = "none")
  
 ggsave("citizen_full_design.png", width = 6, height = 5, dpi = 300)
-``` 
- 
+
+#####################################################################################################
 
 # PARTS E & F — Key Quantities Printed for Commentary
-
-```{r}  
 
 res_env_full <- calc_prop_table(design_full, ~env_steps)
 cat("\nFull design estimates for env_steps:\n")
@@ -430,5 +404,3 @@ cat("\nWeight-only Neff for env_steps:\n")
 print(round(res_env_wt[, c("Proportion", "SE", "DEFF", "Neff")], 4))
 cat("\nWeight-only Neff for citizen:\n")
 print(round(res_cit_wt[, c("Proportion", "SE", "DEFF", "Neff")], 4))
-```
-
