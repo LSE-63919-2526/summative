@@ -191,14 +191,9 @@ print(age_tab)
 
 ## Significance Testing
 
-```{r}
 # Chi-squared test: Is is the distribution of responses independent of sex?
 sex_test <- svychisq(~env_steps + sex, design)
 print(sex_test)
-
-```
-
-Text goes here about preliminary analysis
 
 #####################################################################################################
 
